@@ -1145,8 +1145,8 @@ type Mutations {
   addressDelete(id: ID!): AddressDelete
   addressUpdate(id: ID!, input: AddressInput!): AddressUpdate
   addressSetDefault(addressId: ID!, type: AddressTypeEnum!, userId: ID!): AddressSetDefault
-  userImageUpdate(image: Upload!): UserImageUpdate
-  userImageDelete: UserImageDelete
+  UserAvatarUpdate(image: Upload!): UserAvatarUpdate
+  UserAvatarDelete: UserAvatarDelete
 }
 
 input NameTranslationInput {
@@ -2408,12 +2408,12 @@ input UserCreateInput {
   sendPasswordEmail: Boolean
 }
 
-type UserImageDelete {
+type UserAvatarDelete {
   errors: [Error!]
   user: User
 }
 
-type UserImageUpdate {
+type UserAvatarUpdate {
   errors: [Error!]
   user: User
 }
